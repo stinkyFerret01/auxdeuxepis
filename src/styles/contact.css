@@ -1,0 +1,17 @@
+#contact-container {
+    background-color: #E9DCC6;
+    border: solid #3B4B65 2px;
+    color: #3B4B65;
+    padding: 1rem;
+}
+
+.contact-solution {
+    text-align: center;
+    margin: 2rem;
+}
+
+.contact-info {
+    font-weight: 900;
+    /* color: red; */
+    margin-top: 0.5rem;
+}

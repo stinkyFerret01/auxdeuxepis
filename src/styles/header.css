@@ -1,0 +1,14 @@
+header {
+    position: fixed;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #E9DCC6;
+    border-top: solid #3B4B65 0.5rem;
+    /* color: #3B4B65; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}

@@ -1,0 +1,12 @@
+footer {
+    width: 100%;
+    height: 6rem;
+    background-color: #3B4B65;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ft-title {
+    color:  #E9DCC6;
+}
