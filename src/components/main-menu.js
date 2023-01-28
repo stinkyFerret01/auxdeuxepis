@@ -2,13 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 //-- COMP --//
-const MainMenu = ({
-  setDpMainMenu,
-  dpStory,
-  setDpStory,
-  dpContact,
-  setDpContact,
-}) => {
+const MainMenu = ({ setDpMainMenu }) => {
   const [dpProducts, setDpProducts] = useState(true);
   const navigate = useNavigate();
 
@@ -23,7 +17,12 @@ const MainMenu = ({
 
   //-- RETURN --//
   return (
-    <div id="main-menu-container">
+    <div
+      id="main-menu-container"
+      onMouseLeave={() => {
+        setDpMainMenu(false);
+      }}
+    >
       <button
         onClick={() => {
           toggler(dpProducts, setDpProducts);
@@ -67,20 +66,6 @@ const MainMenu = ({
           </button>
         </section>
       )}
-      {/* <button
-        onClick={() => {
-          toggler(dpStory, setDpStory);
-        }}
-      >
-        <h2 className="mm-title">A propos de nous</h2>
-      </button>
-      <button
-        onClick={() => {
-          toggler(dpContact, setDpContact);
-        }}
-      >
-        <h2 className="mm-title">Contact</h2>
-      </button> */}
     </div>
   );
 };

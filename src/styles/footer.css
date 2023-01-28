@@ -10,3 +10,10 @@ footer {
 .ft-title {
     color:  #E9DCC6;
 }
+
+@media (max-width:647px) {
+    footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+}

@@ -1,14 +1,25 @@
 header {
-    position: fixed;
+ z-index: 1;
     position: sticky;
     top: 0;
     width: 100%;
     background-color: #E9DCC6;
     border-top: solid #3B4B65 0.5rem;
+    border-bottom: solid #3B4B65  0.2rem;
     /* color: #3B4B65; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     box-sizing: border-box;
+}
+
+.header-title {
+    padding-left: 2rem;
+}
+
+@media (max-width:647px) {
+    .header-title {
+        padding-left: 0;
+    }
 }

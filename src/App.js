@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //- import des compposants
 import Header from "./components/header";
 import MainMenu from "./components/main-menu";
-import Story from "./components/story";
 import Contact from "./components/contact";
 import Map from "./components/map";
 import Footer from "./components/footer";
@@ -13,6 +12,8 @@ import Footer from "./components/footer";
 //- import des pages
 import Home from "./pages/home";
 import Products from "./pages/products";
+import About from "./pages/about";
+import Legal from "./pages/legal";
 
 function App() {
   const [dpMainMenu, setDpMainMenu] = useState(false);
@@ -28,10 +29,14 @@ function App() {
           setDpMainMenu={setDpMainMenu}
           dpMap={dpMap}
           setDpMap={setDpMap}
+          dpContact={dpContact}
+          setDpContact={setDpContact}
         ></Header>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products/:category" element={<Products />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/legal" element={<Legal />} />
         </Routes>
         {dpMainMenu && (
           <MainMenu
@@ -42,9 +47,8 @@ function App() {
             setDpContact={setDpContact}
           ></MainMenu>
         )}
-        {dpStory && <Story setDpStory={setDpStory}></Story>}
         {dpContact && <Contact setDpContact={setDpContact}></Contact>}
-        {dpMap && <Map></Map>}
+        {dpMap && <Map setDpMap={setDpMap}></Map>}
         <Footer
           dpStory={dpStory}
           setDpStory={setDpStory}

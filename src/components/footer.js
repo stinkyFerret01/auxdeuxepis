@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 //-- COMP --//
 const Footer = ({ dpStory, setDpStory, dpContact, setDpContact }) => {
   //-- FONCTIONS
@@ -12,13 +14,9 @@ const Footer = ({ dpStory, setDpStory, dpContact, setDpContact }) => {
   //-- RETURN --//
   return (
     <footer>
-      <button
-        onClick={() => {
-          toggler(dpStory, setDpStory);
-        }}
-      >
-        <h5 className="mm-title">A propos de nous</h5>
-      </button>
+      <Link to="/about">
+        <h5 className="ft-title">A propos de nous</h5>
+      </Link>
       <button
         onClick={() => {
           toggler(dpContact, setDpContact);
@@ -26,7 +24,9 @@ const Footer = ({ dpStory, setDpStory, dpContact, setDpContact }) => {
       >
         <h5 className="mm-title">Contactez nous</h5>
       </button>
-      <h5 className="ft-title">Mentions légales</h5>
+      <Link to="/legal">
+        <h5 className="ft-title">Mentions légales</h5>
+      </Link>
     </footer>
   );
 };
